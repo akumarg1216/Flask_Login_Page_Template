@@ -1,0 +1,30 @@
+h2 {
+  color: rgb(226, 26, 93);
+  margin-top: 40px;
+}
+
+.form-control {
+  border: 1px solid black;
+}
+
+.container-login {
+  margin-left: 200px;
+}
+
+.close {
+  margin-left: 1000px;
+  margin-top: -10px;
+}
+
+@media (max-width: 768px) {
+  .close {
+    margin-left: 200px;
+  }
+}
+
+.notes-page {
+  font-size: 24px;
+  color: rgb(226, 26, 93);
+  margin-top: 20px;
+  font-weight:600;
+}

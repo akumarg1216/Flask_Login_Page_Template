@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block title %}Notes{% endblock %} {% block content %}
+<div class="d-flex justify-content-lg-between flex-row bd-highlight mb-3">
+  <div class="p-2 bd-highlight notes-page">{{user.first_name}}</div>
+  <div class="p-2 bd-highlight notes-page">Notes</div>
+  <div class="p-2 bd-highlight notes-page">{{user.email}}</div>
+</div>
+<ul class="list-group list-group-flush" id="notes">
+  {% for note in user.notes %}
+
+  <li class="list-group-item">
+    {{ note.data }}
+    <button type="button" class="close btn btn-dark btn-sm" onClick="deleteNote({{ note.id }})">
+      <span aria-hidden="true">Delete x</span>
+    </button>
+  </li>
+  {% endfor %}
+</ul>
+<form method="POST">
+  <textarea name="note" id="note" rows="1" class="form-control mt-3" style="border: 3px solid blueviolet; outline: none"></textarea>
+  <br />
+  <div align="center">
+    <button type="submit" class="btn btn-primary">Add Note</button>
+  </div>
+</form>
+{% endblock %}

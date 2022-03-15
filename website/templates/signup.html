@@ -1,0 +1,34 @@
+{% extends "base.html" %} {% block title %} Signup {% endblock %} {% block content %}
+
+<br>
+<form method="POST" class="row g-3">
+  <h2 align="center">Register Now</h2>
+  <div class="col-md-6">
+    <label for="firstName">First Name</label>
+    <input type="text" class="form-control" id="firstName" name="fname" placeholder="Enter first name" />
+  </div>
+  <div class="col-md-6">
+    <label for="lastName">Last Name</label>
+    <input type="text" class="form-control" id="lastName" name="lname" placeholder="Enter last name" />
+  </div>
+  <div class="col-12">
+    <label for="email">Email Address</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" />
+  </div>
+  <div class="col-md-6">
+    <label for="password1">Password</label>
+    <input type="password" class="form-control" id="password1" name="password1" placeholder="Enter password" />
+  </div>
+  <div class="col-md-6">
+    <label for="password2">Password (Confirm)</label>
+    <input type="password" class="form-control" id="password2" name="password2" placeholder="Confirm password" />
+  </div>
+  <div class="col-md-6">
+    <label for="city" class="form-label">City</label>
+    <input type="text" class="form-control" name="city" id="city" />
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Register</button>
+  </div>
+</form>
+{% endblock %}
